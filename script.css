@@ -1,0 +1,119 @@
+*{
+  margin:0;
+  box-sizing: border-box;
+}
+
+.buttonContainer{
+  height:35rem;
+  width:27rem;
+  display:grid;
+  justify-content: center;
+  align-self: center;
+  grid-template-rows: repeat(5, 6rem);
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-areas: 
+  "g h i q"
+  "d e f n"
+  "a b c o"
+  "k j m p"
+  ". . l r";
+}
+
+.a{
+  grid-area: a;
+}
+
+.b{
+  grid-area: b;
+}
+
+.c{
+  grid-area: c;
+}
+
+.d{
+  grid-area: d;
+}
+
+.e{
+  grid-area: e;
+}
+
+.f{
+  grid-area: f;
+}
+
+.g{
+  grid-area: g;
+}
+
+.h{
+  grid-area: h;
+}
+
+.i{
+  grid-area: i;
+}
+
+.j{
+  grid-area: j;
+}
+
+.k{
+  grid-area: k;
+}
+
+.l{
+  grid-area: l;
+}
+
+.m{
+  grid-area: m;
+}
+.n{
+  grid-area: n;
+}
+.o{
+  grid-area: o;
+}
+
+.p{
+  grid-area: p;
+}
+
+.q{
+  grid-area: q;
+}
+
+.r{
+  grid-area: r;
+}
+
+
+.keys{
+  margin:1rem;
+}
+
+.container{
+  display:flex;
+  justify-self: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: aqua;
+  width:30rem;
+  height: auto;
+}
+
+#display{
+  width:auto;
+  margin: 1rem 1rem 1rem 0rem;
+
+}
+
+.displaySection{
+  width: 22rem;
+  align-self: center;
+  height:5rem;
+  margin:1rem;
+  background-color: antiquewhite;
+}
