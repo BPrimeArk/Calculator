@@ -1,10 +1,14 @@
 const buttonContainer = document.querySelector(".buttonContainer");
 const buttons = document.querySelectorAll(".keys");
-const display = document.querySelector(".displaySection");
+const display = document.querySelector("#displaySection");
 
-buttons.addEventListener('click', () => {
-  display.textContent= dataset.id;
+buttons.forEach(button => {
+  button.addEventListener('click', () =>{
+    display.textContent += button.dataset.id;
+  });
 });
+
+display.style.backgroundColor
 
 function addition(x, y) {
   return x + y
