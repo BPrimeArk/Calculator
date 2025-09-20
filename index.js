@@ -2,9 +2,9 @@ const buttonContainer = document.querySelector(".buttonContainer");
 const buttons = document.querySelectorAll(".keys");
 const display = document.querySelector("#displaySection");
 const operatorButtons = document.querySelectorAll(".key");
-let operator;
 let firstNumber;
 let secondNumber;
+let operator;
 
 buttons.forEach(button => {
   button.addEventListener('click', () =>{
@@ -12,50 +12,54 @@ buttons.forEach(button => {
   });
 });
 
-function getOperator(){
-  operatorButtons.forEach(operatorButton => {
-  operatorButton.addEventListener('click', () =>{
-    operator = operatorButton.dataset.id;
-  });
-})}
+operatorButtons.forEach(operatorButton => {
+      operatorButton.addEventListener('click', () => {
+        operator = operatorButton.dataset.id;
 
+        return operator
+      });
+});
+    
 function getNumbers() {
   const input = display.textContent;
   let data = input.trim();
-  let split = data.split(getOperator());
-  console.log(data);
-  console.log(split);
+  let split = data.split(operator);
+
   firstNumber = split[0];
   secondNumber = split[1];
+  console.log(input);
+  console.log(data);
+  console.log(split);
   console.log(firstNumber);
+  console.log(secondNumber);
 }
 
-
-document.querySelector('.r').addEventListener('click', getNumbers())
-
-function operation(x, y, operator) {
-  operator = getOperator();
-
-}
-
-display.style.backgroundColor
-
-function addition(x, y) {
-  return x + y
-};
-
-function subrraction(x, y) {
-  return x - y
-};
-
-function division(x, y) {
-  return x / y
-};
-
-function multiplication(x, y) {
-  return x * y
-};
+document.querySelector('.r').addEventListener('click',
+  () => {
+    getNumbers();
+  });
 
 function operation(x, y, operator) {
   
 }
+
+
+// function addition(x, y) {
+//   return x + y
+// };
+
+// function subrraction(x, y) {
+//   return x - y
+// };
+
+// function division(x, y) {
+//   return x / y
+// };
+
+// function multiplication(x, y) {
+//   return x * y
+// };
+
+// function operation(x, y, operator) {
+  
+// }

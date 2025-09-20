@@ -94,7 +94,7 @@
   margin:1rem;
 }
 
-.key .r{
+.key, .r{
   margin: 1rem;
 }
 
@@ -120,4 +120,5 @@
   height:5rem;
   margin:1rem;
   background-color: antiquewhite;
+  text-align: right;
 }
