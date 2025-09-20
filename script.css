@@ -94,6 +94,10 @@
   margin:1rem;
 }
 
+.key .r{
+  margin: 1rem;
+}
+
 .container{
   display:flex;
   justify-self: center;
