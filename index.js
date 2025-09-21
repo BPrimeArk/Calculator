@@ -16,7 +16,7 @@ operatorButtons.forEach(operatorButton => {
       operatorButton.addEventListener('click', () => {
         operator = operatorButton.dataset.id;
 
-        return operator
+        return (operator)
       });
 });
     
@@ -25,41 +25,36 @@ function getNumbers() {
   let data = input.trim();
   let split = data.split(operator);
 
-  firstNumber = split[0];
-  secondNumber = split[1];
-  console.log(input);
-  console.log(data);
-  console.log(split);
-  console.log(firstNumber);
-  console.log(secondNumber);
+  firstNumber = Number(split[0]);
+  secondNumber = Number(split[1]);
+  console.log(typeof firstNumber);
+  console.log(typeof secondNumber);
+  console.log(typeof operator);
 }
-
-document.querySelector('.r').addEventListener('click',
-  () => {
-    getNumbers();
-  });
 
 function operation(x, y, operator) {
   
+  if(operator == '+'){
+    return x + y
+  }
+  else if(operator == '-'){
+    return x - y
+  }
+   else if(operator == '/'){
+    return x / y
+  }
+  else if(operator == '*'){
+    return x * y
+  }
+  
 }
 
 
-// function addition(x, y) {
-//   return x + y
-// };
+document.querySelector('.r').addEventListener('click', () => {
+  getNumbers();
+  let result = operation(firstNumber, secondNumber, operator);
+  console.log(result);
+  display.textContent = result;
+});
 
-// function subrraction(x, y) {
-//   return x - y
-// };
 
-// function division(x, y) {
-//   return x / y
-// };
-
-// function multiplication(x, y) {
-//   return x * y
-// };
-
-// function operation(x, y, operator) {
-  
-// }
